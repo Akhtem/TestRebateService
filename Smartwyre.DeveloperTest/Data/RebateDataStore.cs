@@ -7,7 +7,14 @@ public class RebateDataStore
     public Rebate GetRebate(string rebateIdentifier)
     {
         // Access database to retrieve account, code removed for brevity 
-        return new Rebate();
+        ///test object
+        return new Rebate
+        {
+            Identifier = rebateIdentifier,
+            Incentive = IncentiveType.AmountPerUom,
+            Amount = 10,
+            Percentage = 0
+        };
     }
 
     public void StoreCalculationResult(Rebate account, decimal rebateAmount)
